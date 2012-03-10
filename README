@@ -42,6 +42,10 @@ On the server side you need to configure your user name,
 password, and images path. You also need to create the images
 directory, and upload the script (it's quite obvious).
 
+I personally use gnome, and I have made a panel launcher, that
+will create and send a screenshot with one click, whenever I
+want.
+
 
 --------------------
 2. Requirements
