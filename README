@@ -37,6 +37,8 @@ _URL             - your website, with a trailing slash (here is
                    the upload.php script)
 _IMGPATH         - the path to your images, relative to the
                    website docroot.
+_COMPRESSION     - the compression level for your screenshots, as
+                   they are JPG files. A value between 1 and 100.
 
 On the server side you need to configure your user name,
 password, and images path. You also need to create the images

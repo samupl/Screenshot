@@ -38,12 +38,13 @@ _USER="samu"
 _PASSWORD="abc123"
 _URL="http://your.website.with.trailing.slash/"
 _IMGPATH="images/"
+_COMPRESSION="90"
 
 # Config ends here
 # --------------------------
 
 URL="${_URL}/up.php?user=${_USER}&password=${_PASSWORD}";
-FPATH=`scrot '%Y-%m-%d-%s.jpg' -q 90 -e 'mv $f /tmp; echo /tmp/$f'`;
+FPATH=`scrot '%Y-%m-%d-%s.jpg' -q ${_COMPRESSION} -e 'mv $f /tmp; echo /tmp/$f'`;
 NURL=`curl -s -F "file=@$FPATH" $URL`;
 rm $FPATH;
 zenity --info --text="<a href='http://${_URL}/${_IMGPATH}/$NURL'>http://${_URL}/${_IMGPATH}/$NURL</a>" --no-wrap
