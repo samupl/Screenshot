@@ -1,0 +1,61 @@
+--------------------
+1. Description
+--------------------
+
+This is basically a script set, that will allow you to create 
+a screenshot and send it to a remote server, using file
+upload in PHP.
+
+Why PHP and not SCP/SFTP, one will ask? Feel free to rewrite
+the code, and make it use SSH, if you wish so. I use PHP for
+two reasons:
+
+* not all hosting providers will give you access to SSH, but
+  most of them will give you PHP
+
+* i remember having issues with fail2ban/sshguard, when I've
+  been sending many screenshots in a short peroid of time. 
+  Those scripts thought I was a potential attacker and cut
+  me off for a while.
+
+--------------------
+2. Usage
+--------------------
+
+I have divided the script in to two parts - the client, and
+the server, and it's quite obvious which one is for what. 
+
+You need to configure both the client, and the server,
+providing a valid username/password used to upload your
+screenshots.
+
+The client has following configuration settings:
+
+_USER            - the user name, can be anything alphanumerical
+_PASSWORD        - the password, same as above
+_URL             - your website, with a trailing slash (here is
+                   the upload.php script)
+_IMGPATH         - the path to your images, relative to the
+                   website docroot.
+
+On the server side you need to configure your user name,
+password, and images path. You also need to create the images
+directory, and upload the script (it's quite obvious).
+
+
+--------------------
+2. Requirements
+--------------------
+
+Actually, I don't know what is the minimal version required to work,
+but since it's mostly used on desktops, I can assume that most people
+will have recent version enough.
+
+Client:
+* bash (scripting)
+* scrot (creating the screenshot)
+* curl (sending the screenshot)
+* zenity (rendering a notification, with a clickable URL)
+
+Server:
+* PHP 5.2+
