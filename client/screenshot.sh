@@ -36,8 +36,8 @@
 
 _USER="samu"
 _PASSWORD="abc123"
-_URL="http://your.website.with.trailing.slash/"
-_IMGPATH="images/"
+_URL="screenshot.example.com"
+_IMGPATH="images"
 _COMPRESSION="90"
 
 # Config ends here
